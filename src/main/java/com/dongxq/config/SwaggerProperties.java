@@ -186,15 +186,15 @@ public class SwaggerProperties {
 
     public static class Contact {
         /**
-         * 联系人dongxiaoqi
+         * 联系人 eg. dongxiaoqi
          **/
         private String name = "";
         /**
-         * 联系人url:https://blog.csdn.net/qq_32332777
+         * 联系人 eg. url:https://blog.csdn.net/qq_32332777
          **/
         private String url = "";
         /**
-         * 联系人email:852783734@qq.com
+         * 联系人 eg. email:852783734@qq.com
          **/
         private String email = "";
 

@@ -9,7 +9,10 @@ springboot + spring-context + springfox-swagger2
 #### 说明
 
 1. 需要在客户端的启动类上添加注解[EnableCustomSwagger2]以集成swagger
-2. 需要在客户端的配置文件中配置swagger相关信息。比如：包扫描路径（basePackage）
-#### 配置信息截图
+2. 需要在客户端的配置文件中配置自定义的swagger相关信息，**<font color ="dd00dd">可为空</font>**，默认效果如下图。比如：tittle，description，包扫描路径（basePackage:默认所有，可为空）等
 
-![Snipaste_2022-05-21_23-17-35](README.assets/Snipaste_2022-05-21_23-17-35.png)
+#### 配置及效果信息展示
+
+![引入方式](README.assets/annotation.png)
+![application](README.assets/application.png)
+![swagger-ui](README.assets/swagger-ui.png)

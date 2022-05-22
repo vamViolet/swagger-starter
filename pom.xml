@@ -12,11 +12,11 @@
 
     <groupId>io.github.vamViolet</groupId>
     <artifactId>swagger-starter</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>swagger-starter</name>
     <description>Integrate swagger-ui by annotation</description>
-    <url></url>
+    <url>https://github.com/vamViolet/swagger-starter.git</url>
 
     <licenses>
         <license>
@@ -29,6 +29,7 @@
     <scm>
         <url>https://github.com/OliverLiy/fast-sso</url>
         <connection>https://github.com/OliverLiy/fast-sso.git</connection>
+        <developerConnection>https://github.com/vamViolet/swagger-starter</developerConnection>
     </scm>
     <developers>
         <developer>
