@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.5.4</version>
     </parent>
 
     <groupId>io.github.vamViolet</groupId>
@@ -48,6 +48,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <spring-context.version>5.2.13.RELEASE</spring-context.version>
     </properties>
 
     <dependencies>
@@ -72,7 +73,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.13.RELEASE</version>
+            <version>${spring-context.version}</version>
         </dependency>
     </dependencies>
 
