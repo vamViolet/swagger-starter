@@ -10,10 +10,10 @@
         <version>2.0.3.RELEASE</version>
     </parent>
 
-    <groupId>com.dongxq</groupId>
+    <groupId>io.github.vamViolet</groupId>
     <artifactId>swagger-starter</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <version>1.0.1.RELEASE</version>
+    <packaging>jar</packaging>
     <name>swagger-starter</name>
     <description>Integrate swagger-ui by annotation</description>
     <url></url>
@@ -132,20 +132,6 @@
                             <id>attach-javadocs</id>
                             <goals>
                                 <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-gpg-plugin</artifactId>
-                    <version>1.5</version>
-                    <executions>
-                        <execution>
-                            <id>sign-artifacts</id>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>sign</goal>
                             </goals>
                         </execution>
                     </executions>

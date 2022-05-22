@@ -38,12 +38,12 @@ public class SwaggerProperties {
     /**
      * 标题
      **/
-    private String title = "title";
+    private String title = "default title";
 
     /**
      * 描述
      **/
-    private String description = "";
+    private String description = "default description";
 
     /**
      * 版本
