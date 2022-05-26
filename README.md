@@ -11,13 +11,13 @@ springboot + spring-context + springfox-swagger2
     <dependency>
         <groupId>io.github.vamViolet</groupId>
         <artifactId>swagger-starter</artifactId>
-        <version>1.0.1-RELEASE</version>
+        <version>1.0.2-RELEASE</version>
     </dependency>
 ```
 
 #### 自定义配置(可为空)
 ```
-    #是否启用swagger，默认：true
+    #是否启用swagger，默认：true(建议生产环境配置为false)
     swagger.enabled=true
     #标题，默认：default title
     swagger.title = 标题
