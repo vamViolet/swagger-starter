@@ -11,7 +11,7 @@ springboot + spring-context + springfox-swagger2
     <dependency>
         <groupId>io.github.vamViolet</groupId>
         <artifactId>swagger-starter</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1-RELEASE</version>
     </dependency>
 ```
 
