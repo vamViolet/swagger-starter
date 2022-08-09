@@ -11,7 +11,7 @@ springboot + spring-context + springfox-swagger2
     <dependency>
         <groupId>io.github.vamViolet</groupId>
         <artifactId>swagger-starter</artifactId>
-        <version>1.0.2-RELEASE</version>
+        <version>1.0.3-RELEASE</version>
     </dependency>
 ```
 
@@ -45,3 +45,4 @@ springboot + spring-context + springfox-swagger2
 ![引入方式](README.assets/annotation.png)
 ![application](README.assets/application.png)
 ![swagger-ui](README.assets/swagger-ui.png)
+![配置提示](README.assets/configuration-option.png)

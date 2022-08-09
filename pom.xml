@@ -12,7 +12,7 @@
 
     <groupId>io.github.vamViolet</groupId>
     <artifactId>swagger-starter</artifactId>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>swagger-starter</name>
     <description>Integrate swagger-ui by annotation</description>
@@ -63,6 +63,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>5.2.22.RELEASE</version>
+        </dependency>
+        <!--注解提示-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!-- Swagger -->

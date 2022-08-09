@@ -16,7 +16,7 @@ import java.util.List;
 @ConfigurationProperties("swagger")
 public class SwaggerProperties {
     /**
-     * 是否开启swagger
+     * 是否开启swagger，默认为true，生产环境需要关闭
      */
     private Boolean enabled = Boolean.TRUE;
 
