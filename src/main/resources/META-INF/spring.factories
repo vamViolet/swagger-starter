@@ -1,2 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.dongxq.config.SwaggerAutoConfiguration
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  com.dongxq.config.ActiveSwaggerProfileConfig

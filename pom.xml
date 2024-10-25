@@ -12,7 +12,7 @@
 
     <groupId>io.github.vamViolet</groupId>
     <artifactId>swagger-starter</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-RELEASE</version>
     <packaging>jar</packaging>
     <name>swagger-starter</name>
     <description>Integrate swagger-ui by annotation</description>
@@ -49,6 +49,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <swagger-annotation.version>1.5.21</swagger-annotation.version>
         <spring-context.version>5.2.13.RELEASE</spring-context.version>
     </properties>
 
@@ -72,6 +73,17 @@
         </dependency>
 
         <!-- Swagger -->
+        <!-- 为解决Swagger启动报错，引入高版本 annotations 和 models ；必须放在 swagger2 和 swagger-ui 前，才能优先生效-->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger-annotation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>${swagger-annotation.version}</version>
+        </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -85,6 +97,18 @@
                     <artifactId>springfox-spring-web</artifactId>
                     <groupId>io.springfox</groupId>
                 </exclusion>
+              <exclusion>
+                <artifactId>swagger-annotations</artifactId>
+                <groupId>io.swagger</groupId>
+              </exclusion>
+              <exclusion>
+                <artifactId>swagger-models</artifactId>
+                <groupId>io.swagger</groupId>
+              </exclusion>
+              <exclusion>
+                <artifactId>guava</artifactId>
+                <groupId>com.google.guava</groupId>
+              </exclusion>
             </exclusions>
         </dependency>
         <!-- Swagger UI -->
@@ -92,11 +116,23 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger2.version}</version>
+          <exclusions>
+            <exclusion>
+              <artifactId>guava</artifactId>
+              <groupId>com.google.guava</groupId>
+            </exclusion>
+          </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-context.version}</version>
+          <exclusions>
+            <exclusion>
+              <artifactId>spring-beans</artifactId>
+              <groupId>org.springframework</groupId>
+            </exclusion>
+          </exclusions>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -132,6 +168,12 @@
                 </repository>
             </distributionManagement>
             <build>
+                <resources>
+                  <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>true</filtering>
+                  </resource>
+                </resources>
                 <plugins>
                     <!--生成Source jar文件-->
                     <plugin>
@@ -146,6 +188,17 @@
                                 </goals>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-resources-plugin</artifactId>
+                      <version>2.7</version>
+                      <configuration>
+                        <delimiters>
+                          <delimiter>@</delimiter>
+                        </delimiters>
+                        <useDefaultDelimiters>false</useDefaultDelimiters>
+                      </configuration>
                     </plugin>
                     <!--生成Javadoc，关闭doclint,避免注解检查不通过-->
                     <plugin>

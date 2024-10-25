@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: swagger-starter
+  #高版本spring与swagger整合的匹配策略
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+#swagger:
+#  title: @project.artifactId@
+#  description: @project.description@
